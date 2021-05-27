@@ -1,0 +1,32 @@
+Q: In the Linux system, what is the correlation between, hdd out of space and socket file ? Why we cannot perform a connection if our harddrive space is running out.
+A: Socket file di create di dalam disk, sehingga jika disk nya full tidak dapat create socket kembali.
+
+
+Q: How to whitelist user on ssh login, without removing their public key on the servers ?
+A: Memasukan id_rsa.pub kedalam authorized_keys server tujuan.
+
+
+Q: My lead ask me to check uptime in 200 server, it is really takes time if i have to ssh into every server and run the uptime command. Write ansible adhoc command to solve this, just adhoc command, no need use playbook. And your ansible inventory is ready.
+A: ansible servers -m command -a uptime -i ansible_hosts
+ 
+
+Q: What is the first step you do if you want to generate SSL certificate ?
+A: Generate a key file, Create a Certificate Signing Request (CSR).
+
+Q: I have a web page,
+https://www.sehatq.com/abc/def
+My boss want me to redirect to page to /
+How to do this on NGINX web server ? create the NGINX rewrite rules for this case.
+A: 
+server {
+        server_name https://www.sehatq.com/abc/def;
+        return 301 $scheme://www.sehatq.com/$request_uri;
+}
+ 
+
+Q: One of QA engineer got an issue when uploading a file to our backend, she got 413 error codes. What is the meaning of those HTTP code and how to solve it on NGINX configuration ?
+A: 413 --> Ukuran file terlalu besar, bisa di solve dengan mngubah config nginx di variable client_max_body_size 
+ 
+
+Q: What is the meaning of the orphan process ? How does that happen ?
+A: orphan process adalah Proses yang terjadi karena parent proses dari suatu child proses telah di exit atau diterminate tapi child prosesnya tetap berjalan lalu diadopsi oleh proses init
