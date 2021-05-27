@@ -1,0 +1,13 @@
+Q: What is the difference between ingress controller and ingress resources
+ 
+Q: In managed kubernetes service (EKS, GKE, AKS ) what will happen when you install ingress controller ?
+
+Q: I already deployed HPA (Horizontal Pod Autoscaler ) but it seems the HPA didn’t get the metric (unknown). In your experience, what could be the cause of this issue ?
+
+Q: Take a backup of the etcd cluster and save it to /tmp/etcd-backup.db
+
+Q: Create a Pod called redis-storage with image: redis:alpine with a Volume of type emptyDir that lasts for the life of the Pod. Specs on the right. Just write the manifest
+
+Q: How to get the internal IP address of all nodes using jsonpath
+
+Q: What is the difference between taint and toleration and when to use it ?
